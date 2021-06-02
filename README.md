@@ -9,7 +9,7 @@ Primeiro episódio foi feito hoje dia 31/05/2021, são 5 episódios
 de muito prática e aprendizado, irei colocando o código aqui
 conforme a sequência dos episódios.
 
-Segundo episódio concluído dia 01/05/2021.
+Segundo episódio concluído dia 01/06/2021.
 
 Aconselho a seguir o insta do Matheus, o cara é fera demais!
 Instagram: @sujeitoprogramador
