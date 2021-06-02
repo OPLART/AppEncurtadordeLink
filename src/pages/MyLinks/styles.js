@@ -14,4 +14,5 @@ color: #FFF;
 `;
 
 export const ListLinks = styled.FlatList`
+
 `;

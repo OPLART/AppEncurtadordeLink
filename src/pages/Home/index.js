@@ -1,5 +1,12 @@
 import React, {useState} from 'react';
-import { TouchableWithoutFeedback, Keyboard, KeyboardAvoidingView, Platform, Modal } from 'react-native';
+import {
+  TouchableWithoutFeedback,
+  Keyboard,
+  KeyboardAvoidingView,
+  Platform,
+  Modal,
+  ActivityIndicator
+} from 'react-native';
 
 import StatusBarPage from '../../components/StatusBarPage';
 import Menu from '../../components/Menu';
@@ -21,15 +28,37 @@ import {
 } from './styles';
 import { Feather } from '@expo/vector-icons';
 
+import api from '../../services/api';
 
 export default function Home() {
 
+  const [loading, setLoading] = useState(false);
   const [input, setInput] = useState('');
   const [modalVisible, setModalVisible] = useState(false);
+  const [data, setData] = useState({});
 
-  function handleShortLink() {
-    // alert('URL DIGITADA: '+ input)
-    setModalVisible(true);
+  async function handleShortLink() {
+    setLoading(true);
+
+    try {
+      const response = await api.post('/shorten',
+        {
+        long_url: input
+        })
+
+      setData(response.data); //pega a resposta do data e armazena no setData
+      setModalVisible(true); //abre o modal
+
+      Keyboard.dismiss(); //fecha o teclado
+      setLoading(false); //tira o loading
+      setInput(''); //limpa input
+
+    }catch{
+      alert('Ops parece que deu merda')
+      Keyboard.dismiss();
+      setInput('');
+      setLoading(false);
+    }
   }
 
   return (
@@ -71,15 +100,21 @@ export default function Home() {
             />
           </ContainerInput>
 
-          <ButtonLink onPress={ handleShortLink }>
-            <ButtonLinkText>Gerar Link</ButtonLinkText>
+            <ButtonLink onPress={handleShortLink}>
+              {
+                loading ? (
+                  <ActivityIndicator color="#121212" size={24} />
+                ) : (
+                  <ButtonLinkText>Gerar Link</ButtonLinkText>
+                )
+              }
           </ButtonLink>
 
           </ContainerContent>
         </KeyboardAvoidingView>
 
         <Modal visible={modalVisible} transparent animationType="slide">
-          <ModalLink onClose={ () => setModalVisible(false)} />
+          <ModalLink onClose={ () => setModalVisible(false)} data={data} />
         </Modal>
 
       </LinearGradient>

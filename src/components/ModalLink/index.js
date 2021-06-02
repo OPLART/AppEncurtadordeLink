@@ -15,17 +15,17 @@ import {
 import { Feather } from '@expo/vector-icons';
 import Clipboard from 'expo-clipboard';
 
-export default function ModalLink({ onClose }) {
+export default function ModalLink({ onClose, data }) {
 
   function copyLink() {
-    Clipboard.setString('https://seulink.com.br');
+    Clipboard.setString(data.link);
     alert('Link copiado com sucesso');
   }
 
   async function handleShare() {
     try {
       const result = await Share.share({
-        message: `Link: https://seulink.com.br`
+        message: `Link: ${data.link}`
       });
 
       if (result.action === Share.sharedAction) {
@@ -45,7 +45,7 @@ export default function ModalLink({ onClose }) {
 
   return (
     <ModalContainer>
-      <TouchableWithoutFeedback onPress={onClose} >
+      <TouchableWithoutFeedback onPress={onClose, data} >
         <View style={{ flex: 1 }}></View>
       </TouchableWithoutFeedback>
 
@@ -69,17 +69,14 @@ export default function ModalLink({ onClose }) {
 
         <LinkArea>
           <Title>Link Encurtado</Title>
-          <LongUrl
-           numberOfLines={1}
-          >https://teste.com.br</LongUrl>
+          <LongUrl numberOfLines={1} >{data.long_url}</LongUrl>
 
           <ShortLinkArea
             activeOpacity={1}
             onPress={copyLink}
           >
             <ShortLinkUrl numberOfLines={1}
-            >
-            https://testando.com.br
+            >{data.link}
             </ShortLinkUrl>
             <TouchableOpacity
             onPress={copyLink}
