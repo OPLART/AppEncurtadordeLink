@@ -29,6 +29,7 @@ import {
 import { Feather } from '@expo/vector-icons';
 
 import api from '../../services/api';
+import { saveLink } from '../../utils/storeLinks';
 
 export default function Home() {
 
@@ -48,6 +49,10 @@ export default function Home() {
 
       setData(response.data); //pega a resposta do data e armazena no setData
       setModalVisible(true); //abre o modal
+
+      //DEU TUDO CERTO PRECISO SALVAR ESSE LINK EM UMA LISTA NESSE STORAGE
+      saveLink('sujeitolinks', response.data);
+
 
       Keyboard.dismiss(); //fecha o teclado
       setLoading(false); //tira o loading
