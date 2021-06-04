@@ -1,7 +1,7 @@
 export default {
-  fundoItem: '#2ccbb9',
+  fundoItem: '#2e6f95',
   corItem: '#fff',
-  gradientX: '#1DDBB9',
-  gradientY: '#132742',
+  gradientX: '#ffb600',
+  gradientY: '#892b64',
   cor3: '#FFFFFF',
 };

@@ -46,7 +46,7 @@ return(
   <Container>
     <StatusBarPage
         barStyle="light-content"
-        backgroundColor="#132742"
+        backgroundColor="#2e6f95"
     />
     <Menu />
 

@@ -59,7 +59,7 @@ export default function Home() {
       setInput(''); //limpa input
 
     }catch{
-      alert('Ops parece que deu merda')
+      alert('Ops parece que algo deu errado! :(')
       Keyboard.dismiss();
       setInput('');
       setLoading(false);
@@ -69,12 +69,12 @@ export default function Home() {
   return (
     <TouchableWithoutFeedback onPress={ ()=> Keyboard.dismiss()}>
       <LinearGradient
-        colors={['#1DDBB9', '#132742']}
+        colors={['#2e6f95', '#892b64']}
         style={{flex: 1, justifyContent: 'center'}}
       >
         <StatusBarPage
           barStyle="light-content"
-          backgroundColor="#1DDBB9"
+          backgroundColor="#2e6f95"
         />
 
         <Menu />
@@ -87,16 +87,17 @@ export default function Home() {
         </ContainerLogo>
 
           <ContainerContent>
-          <Title>Sujeito Link</Title>
+          <Title>Shortener</Title>
           <SubTitle>Cole seu link para encurtar</SubTitle>
 
           <ContainerInput>
             <BoxIcon>
               <Feather name="link" size={22} color="#FFF" />
             </BoxIcon>
-            <Input
+              <Input
               placeholder="Cole seu link aqui..."
               placeholderTextColor="white"
+              selectionColor="#FFF"
               autoCapitalize="none"
               autoCorrect={false}
               keyboardType="url"
@@ -110,7 +111,7 @@ export default function Home() {
                 loading ? (
                   <ActivityIndicator color="#121212" size={24} />
                 ) : (
-                  <ButtonLinkText>Gerar Link</ButtonLinkText>
+                  <ButtonLinkText>ENCURTAR</ButtonLinkText>
                 )
               }
           </ButtonLink>

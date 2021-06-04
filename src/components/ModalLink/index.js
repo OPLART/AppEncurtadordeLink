@@ -54,14 +54,14 @@ export default function ModalLink({ onClose, data }) {
           <TouchableOpacity onPress={onClose}>
             <Feather
               name="x"
-              color="#212743"
+              color="#2e6f95"
               size={30}
             />
           </TouchableOpacity>
           <TouchableOpacity onPress={handleShare}>
             <Feather
               name="share"
-              color="#212743"
+              color="#2e6f95"
               size={30}
             />
           </TouchableOpacity>

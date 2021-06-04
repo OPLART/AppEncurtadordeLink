@@ -22,7 +22,7 @@ justify-content: center;
 export const Title = styled.Text`
 font-size: 33px;
 font-weight: bold;
-color: #1ccbae;
+color: #892b64;
 `;
 export const LongUrl = styled.Text`
 font-size: 17px;
@@ -32,7 +32,7 @@ margin-bottom: 30px;
 export const ShortLinkArea = styled.TouchableOpacity`
 height: 45px;
 width: 100%;
-background-color: #172742;
+background-color: #2e6f95;
 border-radius: 7px;
 flex-direction: row;
 justify-content: space-between;

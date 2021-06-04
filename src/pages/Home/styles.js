@@ -38,7 +38,7 @@ export const BoxIcon = styled.View`
   align-items: center;
   justify-content: center;
   padding-left: 10px;
-  width: 11%;
+  width: 10%;
   height: 48px;
   background-color: rgba(255,255,255,0.15);
   border-top-left-radius: 7px;
@@ -59,11 +59,13 @@ export const ButtonLink = styled.TouchableOpacity`
   align-items: center;
   justify-content: center;
   height: 45px;
-  background-color: #FFF;
+  background-color: #2e6f95;
   margin: 0 15px;
   border-radius: 7px;
   margin-bottom: 15px;
 `;
 export const ButtonLinkText = styled.Text`
 font-size: 18px;
+color: #FFF;
+font-weight: bold;
 `;
