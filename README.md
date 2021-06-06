@@ -1,4 +1,4 @@
-Olá, seja bem vindo!
+## Olá 👋, seja bem vindo!
 
 Esse App se trata de um encurtardor de link, está sendo criado
 do zero no evento React Native Insider 3.0, com o professor
