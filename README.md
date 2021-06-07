@@ -25,5 +25,7 @@ A aplicação feita neste no workshop, se trata de um aplicativo que tem a funç
 
 ## WorkShop finalizado dia 04/06/2021.
 
-Instrutor: Matheus Fraga
-Instagram: @sujeitoprogramador
+Instrutor: Matheus Fraga <br>
+<a href="https://www.instagram.com/sujeitoprogramador/" target="_blank">
+<img align="center" alt="miguel-instagram" height="40" width="40" src="https://image.flaticon.com/icons/png/128/1384/1384063.png">
+</a>
