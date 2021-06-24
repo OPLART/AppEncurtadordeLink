@@ -1,4 +1,7 @@
-## Olá 👋, seja bem vindo!
+<img src="src/assets/to_readme/theme.png">
+
+## Projeto
+
 Participei do WorkShop, chamando React Native Insider 3.0, no qual foi desenvolvido um aplicativo do extremo ZERO até o AVANÇADO.
 Foi muita mão na massa, bastante código e claro muito conhecimento adquirido.
 
